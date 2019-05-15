@@ -14,7 +14,25 @@ namespace ex1
             //Comparision String
             Console.WriteLine("** Compare between to strings **");
 
-            if (one!= null && two!= null)
+            if (one != null && two != null)
+            {
+                throw new ArgumentNullException();
+
+            }
+
+            try
+            {
+                if (string.ReferenceEquals(one, two))
+                    Console.WriteLine("one and two are equals \n");
+                else
+                    Console.WriteLine("one and two are not equals \n");
+            }
+            catch (Exception e )
+            {
+                Console.WriteLine("There are no strings to compare in the parameters ({0})",e);
+            }
+
+           /* if (one!= null && two!= null)
             {
                 if (string.ReferenceEquals(one, two))
                     Console.WriteLine("one and two are equals \n");
@@ -24,7 +42,7 @@ namespace ex1
             else
             {
                 Console.WriteLine("There are no strings to compare in the parameters");
-            }
+            } */
 
 
             return null;
