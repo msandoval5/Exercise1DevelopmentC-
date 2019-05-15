@@ -8,7 +8,7 @@ namespace ex1
         static void Main(string[] args)
         {
             newClass newClass = new newClass();
-            newClass.Comparission("first", "Second");
+            newClass.Comparission(null,null);
             newClass.BiggestNumber(new int[] { 4, 2, 6, 9, 1});
             newClass.Sorting(new string[] { "Aparentemente", "asi", "esta", "ordenado", "si como no" });
             newClass.CountLenght("cuentamesta");

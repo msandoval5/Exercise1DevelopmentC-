@@ -9,25 +9,41 @@ namespace ex1
         {
             Console.WriteLine("** Print the first five values from a list **");
 
+            List<int> vs = new List<int>();
+
             for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine(values[i]);
+
+                vs.Add(values[i]);
+
             }
+            foreach (var item in vs)
+            {
+                Console.WriteLine(item);
+            }
+            /*for (int i = 0; i <= vs.Capacity; i++)
+            {
+                Console.WriteLine(vs[i]);
+            } */
+
         }
 
         public void SmallestNumber(int[] arr)
         {
             Console.WriteLine("** Iterate trough an Array and print the smallest number **");
-            var min = arr[0];
-            for (int i = 1; i < arr.Length; i++)
-            {
-                int number = arr[i];
-                if (number < min)
-                {
-                    min = number;
-                }
-            }
-            Console.WriteLine(min.ToString(), "\n");
+
+
+            Array.Sort(arr);
+             var min = arr[0];
+             for (int i = 1; i < arr.Length; i++)
+             {
+                 int number = arr[i];
+                 if (number < min)
+                 {
+                     min = number;
+                 }
+             }
+             Console.WriteLine(min.ToString(), "\n"); 
         }
 
         public void IterateDictionary()
